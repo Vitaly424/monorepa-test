@@ -2,7 +2,7 @@
 	"rewrites": [
 		{
 			"source": "/admin/:path*",
-			"destination": "/admin-panel/:path*"
+			"destination": "/admin-panel/:path*" // Прокси на админку
 		}
 	],
 	"builds": [
@@ -13,6 +13,12 @@
 		{
 			"src": "apps/admin-panel/package.json",
 			"use": "@vercel/next"
+		}
+	],
+	"routes": [
+		{
+			"src": "/admin-panel/(.*)",
+			"dest": "/apps/admin-panel/$1"
 		}
 	]
 }
