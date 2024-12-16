@@ -2,7 +2,7 @@
 	"rewrites": [
 		{
 			"source": "/admin/:path*",
-			"destination": "/admin-panel/:path*" // Прокси на админку
+			"destination": "/admin-panel/:path*"
 		}
 	],
 	"builds": [
